@@ -41,7 +41,7 @@ const ContactForm = () => {
       setSpinner(true);
 
       const response = await fetch("https://openai-contact-form.herokuapp.com/", {
-
+        
         method: "POST",
         headers: {
           "Content-Type": "application/json"
