@@ -87,7 +87,7 @@ const ContactForm = () => {
           <label className={`px-6 font-semibold text-center xl:text-left ${formik.touched.email && formik.errors.email? "text-red-400": ""}`}>{formik.touched.email && formik.errors.email? formik.errors.email: 'Email'}</label>
           <input type='email' placeholder='Enter your email' name='email' value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} className='z-10 w-80 px-3 py-2 m-6 mt-3 outline-slate-500 border-2 border-gray-400 rounded-md'></input>
 
-          <label className={`px-6 font-semibold  text-center xl:text-left${formik.touched.subject && formik.errors.subject? "text-red-400": ""}`}>{formik.touched.subject && formik.errors.subject? formik.errors.subject: 'Subject'}</label>
+          <label className={`px-6 font-semibold  text-center xl:text-left ${formik.touched.subject && formik.errors.subject? "text-red-400": ""}`}>{formik.touched.subject && formik.errors.subject? formik.errors.subject: 'Subject'}</label>
           
           <div className='flex flex-col items-center xl:flex-row xl:items-start'>
 
