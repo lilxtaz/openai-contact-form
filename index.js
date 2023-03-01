@@ -43,8 +43,6 @@ app.post('/', async function(req, res){
 
       })
 
-      res.send("HI");
-
 })
 
 app.listen(process.env.PORT || port, function(){
