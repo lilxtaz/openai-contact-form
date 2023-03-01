@@ -1,0 +1,121 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url('https://fonts.googleapis.com/css2?family=Titillium+Web:wght@300;400;700&display=swap');
+
+body {
+  margin: 0;
+  font-family: 'Titillium Web', sans-serif;
+  font-weight: 600;
+
+
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+a {
+
+  margin-left: 0.3rem !important;
+
+}
+
+a:hover {
+
+  color: #6b7280 !important;
+
+}
+
+input{
+
+  font-weight: 400;
+
+}
+
+textarea{
+
+  font-weight: 400;
+
+}
+
+/* Create a thin scrollbar track */
+textarea::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  width: 6px;
+}
+
+/* Create a thin scrollbar thumb */
+textarea::-webkit-scrollbar-thumb {
+  background-color: lightgreen;
+  border-radius: 5px;
+  width: 6px;
+}
+
+/* On hover, add a darker background color */
+textarea::-webkit-scrollbar-thumb:hover {
+  background-color: greenyellow;
+}
+
+/* Set the scrollbar width and color */
+textarea::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: lightgreen;
+}
+
+textarea::-webkit-scrollbar-thumb {
+  background-color: rgb(206, 252, 185);
+}
+
+/* Create a thin scrollbar track */
+::-webkit-scrollbar-track {
+  background-color: #f1f1f1;
+  width: 6px;
+}
+
+/* Create a thin scrollbar thumb */
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 5px;
+  width: 6px;
+}
+
+/* On hover, add a darker background color */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+
+/* Set the scrollbar width and color */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+  background-color: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+}
+
+
+@media only screen and (max-width: 768px){
+
+  input{
+
+    text-align: center;
+
+  }
+
+  textarea{
+
+    text-align: center;
+
+  }
+
+  ::placeholder {
+    text-align: center;
+}
+
+
+}
