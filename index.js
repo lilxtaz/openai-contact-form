@@ -5,7 +5,7 @@ const cors = require('cors');
 
 const configuration = new Configuration({
     organization: "org-ky6vlFY7VmfTrJnB21jZ79OF",
-    apiKey: "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",
+    apiKey: "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",
 });
 const openai = new OpenAIApi(configuration);
 
