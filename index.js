@@ -18,7 +18,7 @@ app.use(cors());
 
 const port = 3080;
 
-app.use(express.static('/build'));
+app.use(express.static('client/build'));
     const path = require('path');
     app.get('*', (req, res) => {
     res.sendFile(path.resolve(__dirname, 'build', 'index.html'));
