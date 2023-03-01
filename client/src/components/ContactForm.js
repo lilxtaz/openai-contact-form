@@ -40,11 +40,12 @@ const ContactForm = () => {
 
       setSpinner(true);
 
-      const response = await fetch("http://localhost:3080/", {
+      const response = await fetch("https://openai-contact-form.herokuapp.com/", {
 
         method: "POST",
         headers: {
-          "Content-Type": "application/json"
+          "Content-Type": "application/json",
+          'Access-Control-Allow-Origin':'*'
         },
         body: JSON.stringify({
 
