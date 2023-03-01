@@ -93,7 +93,7 @@ const ContactForm = () => {
 
           <input type='text' placeholder='Enter the subject' name='subject' value={formik.values.subject} onChange={formik.handleChange} onBlur={formik.handleBlur} className='z-10 w-80 px-3 py-2 m-6 mt-3 outline-slate-500 border-2 border-gray-400 rounded-md'></input>
      
-          {(spinner && <div>
+          {(spinner && <div className='z-10'>
 
             <Spinner className='xl:mt-6' animation="border" role="status" />
 
