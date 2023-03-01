@@ -25,7 +25,7 @@ app.use(express.static('client/build'));
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 
-app.post('/', async function(req, res){
+app.post('https://openai-contact-form.herokuapp.com/', async function(req, res){
 
     const { message } = req.body;
 
