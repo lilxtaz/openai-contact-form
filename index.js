@@ -29,7 +29,7 @@ app.post('/', async function(req, res){
 
     const { message } = req.body;
 
-
+    
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `\n\n${message}`,
