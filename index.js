@@ -28,7 +28,7 @@ app.use(express.static('client/build'));
 app.post('/', async function(req, res){
 
     const { message } = req.body;
-
+    console.log(message);
 
     const response = await openai.createCompletion({
         model: "text-davinci-003",

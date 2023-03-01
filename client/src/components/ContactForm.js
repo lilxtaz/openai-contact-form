@@ -40,7 +40,7 @@ const ContactForm = () => {
 
       setSpinner(true);
 
-      const response = await fetch("/", {
+      const response = await fetch("http://localhost:3080/", {
 
         method: "POST",
         headers: {
@@ -55,6 +55,7 @@ const ContactForm = () => {
       });
       
       const data = await response.json();
+      console.log(data.message)
       await setAiRes(data.message);
       setSpinner(false);
 
