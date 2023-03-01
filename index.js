@@ -29,8 +29,6 @@ app.post('/', async function(req, res){
 
     const { message } = req.body;
 
-    console.log("Hi");
-    console.log(process.env.API_KEY);
 
     const response = await openai.createCompletion({
         model: "text-davinci-003",
@@ -50,4 +48,7 @@ app.post('/', async function(req, res){
 
 app.listen(process.env.PORT || port, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+  console.log("Hi");
+  console.log(process.env.API_KEY);
+
 });
