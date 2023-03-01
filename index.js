@@ -29,6 +29,7 @@ app.post('https://openai-contact-form.herokuapp.com/', async function(req, res){
 
     const { message } = req.body;
 
+    console.log(message);
     
     const response = await openai.createCompletion({
         model: "text-davinci-003",
