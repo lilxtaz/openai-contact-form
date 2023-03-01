@@ -9,6 +9,7 @@ import { motion } from "framer-motion";
 
 
 const ContactForm = () => {
+  
 
   const [spinner, setSpinner] = useState(false);
 
@@ -42,7 +43,7 @@ const ContactForm = () => {
 
       setSpinner(true);
 
-      const response = await fetch("/", {
+      const response = await fetch("https://openai-contact-form.herokuapp.com/", {
 
         method: "POST",
         headers: {
