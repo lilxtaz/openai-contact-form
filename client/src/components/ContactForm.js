@@ -6,6 +6,8 @@ import Spinner from 'react-bootstrap/Spinner';
 import { motion } from "framer-motion";
 
 
+
+
 const ContactForm = () => {
 
   const [spinner, setSpinner] = useState(false);
@@ -40,7 +42,7 @@ const ContactForm = () => {
 
       setSpinner(true);
 
-      const response = await fetch("http://localhost:3080/", {
+      const response = await fetch("http://localhost:3080", {
 
         method: "POST",
         headers: {
