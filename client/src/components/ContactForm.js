@@ -42,7 +42,7 @@ const ContactForm = () => {
 
       setSpinner(true);
 
-      const response = await fetch("http://localhost:3080", {
+      const response = await fetch("/", {
 
         method: "POST",
         headers: {
