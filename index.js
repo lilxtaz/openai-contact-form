@@ -25,12 +25,11 @@ app.use(express.static('client/build'));
     res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
   });
 
-app.post('https://openai-contact-form.herokuapp.com/', async function(req, res){
+app.post('/', async function(req, res){
 
     const { message } = req.body;
 
-    console.log(message);
-    
+
     const response = await openai.createCompletion({
         model: "text-davinci-003",
         prompt: `\n\n${message}`,
@@ -49,7 +48,5 @@ app.post('https://openai-contact-form.herokuapp.com/', async function(req, res){
 
 app.listen(process.env.PORT || port, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
-  console.log("Hi");
-  console.log(process.env.API_KEY);
-
+  
 });
