@@ -37,6 +37,8 @@ app.post('/', async function(req, res){
 
       });
 
+      console.log(response.data.choices[0].text.trim());
+
       res.json({
 
         message: response.data.choices[0].text.trim()
