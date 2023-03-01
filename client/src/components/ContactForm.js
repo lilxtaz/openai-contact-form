@@ -82,12 +82,12 @@ const ContactForm = () => {
 
         </h1>
         <form onSubmit={formik.handleSubmit} className="flex flex-col xl:items-start items-center justify-center px-8 m-8">
-          <label className={`px-6 font-semibold ${formik.touched.name && formik.errors.name? "text-red-400": ""}`}>{formik.touched.name && formik.errors.name? formik.errors.name: 'Name'}</label>
+          <label className={`px-6 font-semibold text-center xl:text-left ${formik.touched.name && formik.errors.name? "text-red-400": ""}`}>{formik.touched.name && formik.errors.name? formik.errors.name: 'Name'}</label>
           <input type='text' placeholder='Enter your name' name='name' value={formik.values.name} onChange={formik.handleChange} onBlur={formik.handleBlur} className='z-10 w-80 px-3 py-2 m-6 mt-3 outline-slate-500 border-2 border-gray-400 rounded-md'></input>
-          <label className={`px-6 font-semibold ${formik.touched.email && formik.errors.email? "text-red-400": ""}`}>{formik.touched.email && formik.errors.email? formik.errors.email: 'Email'}</label>
+          <label className={`px-6 font-semibold text-center xl:text-left ${formik.touched.email && formik.errors.email? "text-red-400": ""}`}>{formik.touched.email && formik.errors.email? formik.errors.email: 'Email'}</label>
           <input type='email' placeholder='Enter your email' name='email' value={formik.values.email} onChange={formik.handleChange} onBlur={formik.handleBlur} className='z-10 w-80 px-3 py-2 m-6 mt-3 outline-slate-500 border-2 border-gray-400 rounded-md'></input>
 
-          <label className={`px-6 font-semibold ${formik.touched.subject && formik.errors.subject? "text-red-400": ""}`}>{formik.touched.subject && formik.errors.subject? formik.errors.subject: 'Subject'}</label>
+          <label className={`px-6 font-semibold  text-center xl:text-left${formik.touched.subject && formik.errors.subject? "text-red-400": ""}`}>{formik.touched.subject && formik.errors.subject? formik.errors.subject: 'Subject'}</label>
           
           <div className='flex flex-col items-center xl:flex-row xl:items-start'>
 
@@ -101,7 +101,7 @@ const ContactForm = () => {
 
           </div>
           
-          <label className={`px-6 font-semibold mt-3 xl:mt-0 ${formik.touched.message && formik.errors.message? "text-red-400": ""}`}>{formik.touched.message && formik.errors.message? formik.errors.message: 'Message'}</label>
+          <label className={`px-6 font-semibold text-center xl:text-left mt-3 xl:mt-0 ${formik.touched.message && formik.errors.message? "text-red-400": ""}`}>{formik.touched.message && formik.errors.message? formik.errors.message: 'Message'}</label>
           <textarea rows={15} placeholder="Enter the subject and click on 'Generate' to let AI generate a mail for you" name='message' value={aiRes} onChange={handleChange} onBlur={formik.handleBlur} className='w-80 xl:w-3/6 z-10 px-3 py-2 m-6 mt-3 outline-slate-500 border-2 border-gray-400 rounded-md resize-none'></textarea>
 
           <div className=' flex'>
