@@ -43,8 +43,6 @@ app.post('/', async function(req, res){
 
 })
 
-app.listen(port, function(req, res){
-
-    console.log('Server is up and running on port 3080');
-
-})
+app.listen(process.env.PORT || port, function(){
+  console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
+});
