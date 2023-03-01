@@ -27,8 +27,6 @@ app.use(express.static('client/build'));
 
 app.post('/', async function(req, res){
 
-    console.log("Hi");
-
     const { message } = req.body;
 
     const response = await openai.createCompletion({
@@ -44,6 +42,8 @@ app.post('/', async function(req, res){
         message: response.data.choices[0].text.trim()
 
       })
+
+      res.send("HI");
 
 })
 
