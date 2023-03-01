@@ -29,6 +29,7 @@ app.post('/', async function(req, res){
 
     const { message } = req.body;
 
+    console.log("Hi");
     console.log(process.env.API_KEY);
 
     const response = await openai.createCompletion({
