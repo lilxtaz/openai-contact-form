@@ -59,8 +59,8 @@ const ContactForm = () => {
       });
       
       const data = await response.json();
-      console.log(data.message)
-      await setAiRes(data.message);
+      
+      await setAiRes(data.message.replaceAll("[Your Name]", formik.values.name));
       setSpinner(false);
 
     }
