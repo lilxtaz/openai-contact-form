@@ -100,7 +100,7 @@ const ImageGenerator = () => {
           </div>
 
           <label className={`px-6 font-semibold text-center xl:text-left mt-3 xl:mt-0 ${formik.touched.message && formik.errors.message? "text-red-400": ""}`}>{formik.touched.message && formik.errors.message? formik.errors.message: 'Image'}</label>
-          <div className='w-80 h-96 xl:w-2/3 xl:h-full z-10 p-6 m-6 mt-3 outline-slate-500 border-2 border-gray-400 rounded-md '>
+          <div className='w-80 h-80 xl:w-2/3 xl:h-full z-10 p-6 m-6 mt-3 outline-slate-500 border-2 border-gray-400 rounded-md '>
           {(image && <div className='xl:flex xl:h-full justify-center items-center w-2/4 m-auto pt-16 xl:py-56'>
 
                 <motion.img 
