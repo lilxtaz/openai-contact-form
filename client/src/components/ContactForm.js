@@ -4,6 +4,9 @@ import {useFormik} from 'formik'
 import * as Yup from 'yup'
 import Spinner from 'react-bootstrap/Spinner';
 import { motion } from "framer-motion";
+import { Button } from '@mui/material';
+import * as BiIcons from 'react-icons/bi';
+import { Link } from 'react-router-dom';
 
 
 
@@ -14,6 +17,8 @@ const ContactForm = () => {
   const [spinner, setSpinner] = useState(false);
 
   const [aiRes, setAiRes] = useState("");
+
+  const [newsColor, setnewsColor] = useState(false);
 
   const handleChange = (e) => {
 
@@ -140,7 +145,19 @@ const ContactForm = () => {
 
         </div>
 
+        <motion.div className='flex justify-center items-center'>
+        <Button component={Link} to='/image-gen' className=' !rounded-3xl hover:!text-green-500 ' sx={{backgroundColor:'#16a34a', color: 'white', width: '225px', margin: '2rem 0', padding: '10px 12px' }}
+            onMouseEnter={() => setnewsColor(true)}
+            onMouseLeave={() => setnewsColor(false)}
+            
+            color="tertiary"
+            size="large"
+            variant="elevated"
+            startIcon={<BiIcons.BiNavigation className=' mb-1' style={{ color: newsColor ? '#16a34a' : 'white' }}/>}
+        >Image Generator</Button></motion.div>
+
       </div>
+      
     </div>
   )
 }

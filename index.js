@@ -45,6 +45,25 @@ app.post('/', async function(req, res){
 
 })
 
+app.post('/image-gen', async function(req, res){
+
+  const { message } = req.body;
+
+  const response = await openai.createImage({
+      prompt: `${message}`,
+      n: 1,
+      size: "512x512",
+
+    });
+
+    res.json({
+
+      message: response.data.data[0].url
+
+    })
+
+})
+
 app.listen(process.env.PORT || port, function(){
   console.log("Express server listening on port %d in %s mode", this.address().port, app.settings.env);
   
